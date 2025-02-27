@@ -29,7 +29,7 @@ See nuget.org for [the latest version](https://www.nuget.org/packages/WhalesSecr
 
 ## License 
 
-[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a commercial product, but you are allowed to use the product for _free_ with the following restriction: _Unless you purchase a valid license, you can only create small orders_.
+[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a commercial product, but you are allowed to use the product for _free_ with the following restriction: _Unless you purchase a valid license, you can only create small orders_. See the [license](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib/1.0.1.2/License).
 
 ## Basic Usage
 
@@ -77,6 +77,31 @@ decimal bestAsk = orderBook.Asks[0].Price;
 await Console.Out.WriteLineAsync($"Best bid price is {bestBid}, best ask price is {bestAsk}.").ConfigureAwait(false);
 ```
 
+## Logging
+
+The library uses [NLog](https://nlog-project.org/) to log (almost) all actions it does. By default, the INFO logging level is used. You can change verbosity of your logs to the DEBUG logging level by adding `NLog.config` file to your project with the following contents:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" autoReload="true">
+  <targets>
+    <target name="myLog" xsi:type="AsyncWrapper" queueLimit="10000" overflowAction="Block" batchSize="1000">
+      <target xsi:type="File" fileName="logs/log.txt" archiveNumbering="Date" maxArchiveFiles="5" archiveEvery="Day" concurrentWrites="true" layout="[${longdate:universalTime=true} ${threadid}|${mdlc:item=mdlcId}] ${level:uppercase=true}: ${callsite:captureStackTrace=false} ${message}" encoding="utf-8" />
+    </target>
+  </targets>
+  <rules>
+    <logger name="WhalesSecret.*" minlevel="Debug" writeTo="myLog" />
+  </rules>
+</nlog>
+```
+
+If you want even more verbose logs, you can switch to the TRACE logging level using:
+
+```xml
+<logger name="WhalesSecret.*" minlevel="Trace" writeTo="myLog" />
+```
+
+For more information, you can consult NLog's [documentation](https://github.com/nlog/nlog/wiki).
 
 [^1]: .NET 9+ is currently supported.
 [^2]: More to come.
