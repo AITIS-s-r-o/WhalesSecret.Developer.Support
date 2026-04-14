@@ -1,6 +1,8 @@
 # Whale's Secret Developer Support
 
-[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a library designed to provide unified API for .NET[^1] for [Binance](https://www.binance.com) and [KuCoin](https://www.kucoin.com) exchanges[^2].
+[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a library designed to provide unified API for .NET[^1] for [Binance](https://www.binance.com), [KuCoin](https://www.kucoin.com), and [Kraken](https://www.kraken.com/) exchanges[^2].
+
+See also the full [ScriptApiLib API Documentation](https://whalessecret.com/documentation/api/WhalesSecret.ScriptApiLib.ScriptApi.html).
 
 ## Reporting Issues
 
@@ -22,14 +24,14 @@ If you want to discuss an issue, you might as well join the Telegram support cha
 You can install the library using:
 
 ```xml
-<PackageReference Include="WhalesSecret.ScriptApiLib" Version="1.0.1.2" />
+<PackageReference Include="WhalesSecret.ScriptApiLib" Version="*" />
 ```
 
 See nuget.org for [the latest version](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib).
 
 ## License 
 
-[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a commercial product, but you are allowed to use the product for _free_ with the following restriction: _Unless you purchase a valid license, you can only create small orders_. See the [license](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib/1.0.1.2/License).
+[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a commercial product, but you are allowed to use the product for _free_ with the following restriction: _Unless you purchase a valid license, you can only create small orders_. See the [license](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib/1.1.3/License).
 
 ## Basic Usage
 
