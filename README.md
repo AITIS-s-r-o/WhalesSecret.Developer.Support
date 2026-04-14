@@ -31,7 +31,7 @@ See nuget.org for [the latest version](https://www.nuget.org/packages/WhalesSecr
 
 ## License 
 
-[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a commercial product, but you are allowed to use the product for _free_ with the following restriction: _Unless you purchase a valid license, you can only create small orders_. See the [license](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib/1.1.3/License).
+[Whale's Secret ScriptApiLib Library](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib) is a commercial product, but you are allowed to use the product for _free_ with the following restriction: _Unless you purchase a valid license, you can only create small orders_. See the [license](https://www.nuget.org/packages/WhalesSecret.ScriptApiLib/1.1.4/License).
 
 ## Basic Usage
 
